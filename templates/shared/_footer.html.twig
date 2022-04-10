@@ -1,0 +1,49 @@
+{# --- Footer --- #}
+    <footer>
+        <div class="contact-background">
+        <div class="container">
+        <div class="screen">
+            <div class="screen-header">
+            <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button minimize"></div>
+                <div class="screen-header-button maximize"></div>
+            </div>
+            </div>
+            <div class="screen-body">
+            <div class="screen-body-item left">
+                <div class="app-title">
+                <span class="contact-us-title">CONTACT US</span>
+                </div>
+                <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+                <div class="app-newsletter">
+                    {% if app.user %}
+                    <a href="{{url('admin.users.interet', {id: app.user.id} ) }}",  class="app-form-button">Je souhaite être informé(e) des nouveautés</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="screen-body-item">
+                <form class="app-form" method="POST">
+                
+                <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NAME" name="name" > 
+                </div>
+                <div class="app-form-group">
+                    <input class="app-form-control" placeholder="EMAIL" name="email">
+                </div>
+                <div class="app-form-group">
+                    <input class="app-form-control" placeholder="CONTACT NO" name="contactnumber">
+                </div>
+                <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE" name="message">
+                </div>
+                <div class="app-form-group buttons">
+                    <button class="app-form-button">SEND</button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{# --- End Footer --- #}
